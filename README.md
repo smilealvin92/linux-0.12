@@ -95,5 +95,5 @@ ata0-master: type=disk, mode=flat, path="/tmp/root-0.12.img", cylinders=410, hea
 165 while (--retries && (inb_p(HD_STATUS)&0x80));
 理由是：驱动器是否就绪与控制器的状态无关，我们只需要检测状态寄存器忙位是否为1即可，不需要管就绪位。
 # 另外感谢大佬分享
-再参考下面的bear make，就能得到正确的cmakelist.txt。从而实现clion跳转。
+再参考下面的bear make，结合kernel-grok，就能得到正确的cmakelists.txt。从而实现clion跳转。这样在ubuntu下看源码就方便得多
 https://gitee.com/nkbai/clion-linux-kernel-3.16
